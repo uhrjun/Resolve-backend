@@ -1,0 +1,32 @@
+//https://flatuicolors.com/palette/defo
+const myTheme = {
+  black: "rgba(0, 0, 0,1.0)",
+  lblack: "rgba(33, 33, 33,1)",
+  lblack2: "rgba(50, 50, 50, 1)",
+  white: "rgba(255, 255, 255,1.0)",
+  offwhite: "rgba(236, 240, 241,1.0)",
+  turquoise: "rgba(26, 188, 156,1.0)",
+  turquoise2: "rgba(22, 160, 133,1.0)",
+  green1: "rgba(46, 204, 113,1.0)",
+  green2: "rgba(39, 174, 96,1.0)",
+  blue1: "rgba(52, 152, 219,1.0)",
+  blue2: "rgba(41, 128, 185,1.0)",
+  dblue1: " rgba(0, 0, 139, 1)",
+  dblue2: "rgba(0, 106, 255, 1)",
+  purple1: "rgba(155, 89, 182,1.0)",
+  purple2: "rgba(142, 68, 173,1.0)",
+  yellow: "rgba(241, 196, 15,1.0)",
+  orange1: "rgba(243, 156, 18,1.0)",
+  orange2: "rgba(230, 126, 34,1.0)",
+  orange3: "rgba(211, 84, 0,1.0)",
+  red1: "rgba(231, 76, 60,1.0)",
+  red2: "rgba(192, 57, 43,1.0)",
+  lgrey: "rgba(242, 245, 247, 1)",
+  grey1: "rgba(189, 195, 199,1.0)",
+  dgrey1: "rgba(149, 165, 166,1.0)",
+  dgrey2: "rgba(127, 140, 141,1.0)",
+  bluegrey1: "rgba(52, 73, 94,1.0)",
+  bluegrey2: "rgba(44, 62, 80,1.0)",
+};
+
+export default myTheme;

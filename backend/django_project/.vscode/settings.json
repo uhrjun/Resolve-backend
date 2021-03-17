@@ -1,0 +1,9 @@
+{
+  "python.linting.enabled": false,
+  "python.pythonPath": "/home/arjun/Projects/IssueTracker/backend/lin_env_files/bin/python",
+  "editor.foldingHighlight": false,
+  "editor.folding": false,
+  "editor.formatOnSave": true,
+  "python.formatting.blackPath": "/home/arjun/.local/lib/python3.9/site-packages/",
+  "editor.defaultFormatter": "ms-python.python"
+}
