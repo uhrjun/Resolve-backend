@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Form, Formik, Field } from "formik";
-import Modal from "../../../../Styles/Modal";
-import * as form from "../../../../Styles/Form";
-import * as Yup from "yup";
+import { Field, Form, Formik } from "formik";
+import React, { useEffect, useState } from "react";
+import { BiPlus } from "react-icons/bi";
 import { useParams } from "react-router-dom";
-import axiosInstance from "../../../../apis/projects.instance";
-import { PrimaryButton, Label, Textarea } from "../../../../Styles/Styles";
 import Select from "react-select";
+import * as Yup from "yup";
+import axiosInstance from "../../../../apis/projects.instance";
+import * as form from "../../../../Atomics/Form";
+import Modal from "../../../../Atomics/Modal";
+import { Label, PrimaryButton, Textarea } from "../../../../Atomics/Styles";
 
-export default function NewIssueForm(columns) {
+export default function NewIssueForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [labelData, setlabelData] = useState([]);
   const [memberData, setMemberData] = useState([]);
@@ -17,6 +18,7 @@ export default function NewIssueForm(columns) {
   const labelUrl = "projects/" + selectedProject + "/update/labels";
   const memberUrl = "projects/" + selectedProject;
   const toggleIsModalOpen = () => setIsModalOpen(!isModalOpen);
+  console.log("HERE YOU GO " + selectedProject);
 
   useEffect(() => {
     async function getMembers() {
@@ -102,7 +104,24 @@ export default function NewIssueForm(columns) {
 
   return (
     <div>
-      <PrimaryButton onClick={toggleIsModalOpen}>Create Issue</PrimaryButton>
+      <PrimaryButton
+        onClick={toggleIsModalOpen}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <BiPlus
+          style={{
+            fontSize: "20px",
+            color: "white",
+            verticalAlign: "top",
+            marginRight: "2px",
+          }}
+        />
+        Create Issue
+      </PrimaryButton>
       {isModalOpen && (
         <Modal closeModal={() => setIsModalOpen(false)}>
           <Formik

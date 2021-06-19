@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PrimaryButton } from "../../../Styles/Styles";
+import { PrimaryButton } from "../../../Atomics/Styles";
 
 export const Container = styled.div`
   display: flex;

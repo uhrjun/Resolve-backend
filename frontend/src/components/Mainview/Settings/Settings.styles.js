@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { UserImage } from "../../../Styles/Styles";
+import { UserImage } from "../../../Atomics/Styles";
 export const SettingsFormContainer = styled.div`
   display: flex;
   flex-direction: column;

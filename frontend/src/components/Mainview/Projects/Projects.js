@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axiosInstance from "../../../apis/projects.instance";
-import * as styled from "./Projects.styles";
-import NewProjectForm from "./NewProject";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { ModalProvider } from "styled-react-modal";
+import axiosInstance from "../../../apis/projects.instance";
+import NewProjectForm from "./NewProject";
+import * as styled from "./Projects.styles";
 
 function ProjectList() {
   const [projects, setProjects] = useState([]);

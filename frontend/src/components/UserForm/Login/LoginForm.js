@@ -3,8 +3,8 @@ import { authService } from "../../../utils/auth.service";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
-import Modal from "../../../Styles/Modal";
-import { Input, PrimaryButton, Label } from "../../../Styles/Styles";
+import Modal from "../../../Atomics/Modal";
+import { Input, PrimaryButton, Label } from "../../../Atomics/Styles";
 import * as styled from "./LoginForm.styles";
 
 export default function LoginForm(props) {

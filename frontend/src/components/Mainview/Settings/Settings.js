@@ -3,7 +3,7 @@ import axiosInstance from "../../../apis/accounts.instance";
 import * as Yup from "yup";
 import { Form, Formik, Field } from "formik";
 import * as styled from "./Settings.styles";
-import { Input } from "../../../Styles/Styles";
+import { Input } from "../../../Atomics/Styles";
 
 const Settings = () => {
   const [userdata, setUserData] = useState([]);

@@ -1,14 +1,15 @@
+import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
-import Modal from "../../../../Styles/Modal";
-import * as form from "../../../../Styles/Form";
-import { useParams } from "react-router-dom";
-import axiosInstance from "../../../../apis/projects.instance";
-import { Form, Formik, Field } from "formik";
-import * as Yup from "yup";
 import { GithubPicker } from "react-color";
 import { FiDelete } from "react-icons/fi";
-import { SecondaryButton } from "../../../../Styles/Styles";
-import { Tags } from "../../../../Styles/Table";
+import { MdLabel } from "react-icons/md";
+import { useParams } from "react-router-dom";
+import * as Yup from "yup";
+import axiosInstance from "../../../../apis/projects.instance";
+import * as form from "../../../../Atomics/Form";
+import Modal from "../../../../Atomics/Modal";
+import { SecondaryButton } from "../../../../Atomics/Styles";
+import { Label } from "../../../../Atomics/Styles";
 
 export default function Labels() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -91,9 +92,9 @@ export default function Labels() {
         justifyContent: "space-between",
       }}
     >
-      <Tags key={label.id} style={{ backgroundColor: label.color }}>
+      <Label key={label.id} style={{ backgroundColor: label.color }}>
         {label.name}
-      </Tags>
+      </Label>
       <FiDelete
         style={{ fontSize: "24px", color: "red", cursor: "pointer" }}
         onClick={() => {
@@ -117,7 +118,23 @@ export default function Labels() {
 
   return (
     <div>
-      <SecondaryButton onClick={getLabels} style={{ marginLeft: "0.15em" }}>
+      <SecondaryButton
+        onClick={getLabels}
+        style={{
+          marginLeft: "0.15em",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <MdLabel
+          style={{
+            fontSize: "20px",
+            color: "white",
+            verticalAlign: "middle",
+            marginRight: "2px",
+          }}
+        />
         Labels
       </SecondaryButton>
       {isModalOpen && (

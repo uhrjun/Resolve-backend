@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Input } from "../Styles/Styles";
+import { Input } from "../Atomics/Styles";
 
 export const Heading = styled.h2`
   font-weight: 500;

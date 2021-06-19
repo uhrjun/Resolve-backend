@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Input, PrimaryButton, UserImage } from "../../../Styles/Styles";
+import { Input, PrimaryButton, UserImage } from "../../../Atomics/Styles";
 
 export const TopBarContainer = styled.div`
   display: flex;

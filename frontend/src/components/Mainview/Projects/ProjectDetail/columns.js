@@ -1,4 +1,4 @@
-import * as s from "../../../../Styles/Table";
+import * as s from "../../../../Atomics/Table";
 import dayjs from "dayjs";
 
 export const COLUMNS = [

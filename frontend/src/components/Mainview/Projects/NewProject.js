@@ -3,9 +3,9 @@ import { projectService } from "../../../utils/project.service";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import * as styled from "./Projects.styles";
-import * as form from "../../../Styles/Form";
-import { Input, Label } from "../../../Styles/Styles";
-import Modal from "../../../Styles/Modal";
+import * as form from "../../../Atomics/Form";
+import { Input, Label } from "../../../Atomics/Styles";
+import Modal from "../../../Atomics/Modal";
 import { FiPlus } from "react-icons/fi";
 export default function NewProjectForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -3,12 +3,12 @@ import { authService } from "../../../utils/auth.service";
 import { Field, Form, Formik } from "formik";
 import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import Modal from "../../../Styles/Modal";
+import Modal from "../../../Atomics/Modal";
 
 //Styles
 import * as styled from "./RegisterForm.styles";
-import modalStyle from "../../../Styles/Modal";
-import { Input, SecondaryButton, Label } from "../../../Styles/Styles";
+import modalStyle from "../../../Atomics/Modal";
+import { Input, SecondaryButton, Label } from "../../../Atomics/Styles";
 
 export default function RegisterForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);

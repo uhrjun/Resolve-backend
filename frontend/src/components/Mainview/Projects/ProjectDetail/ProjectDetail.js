@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { COLUMNS } from "./columns";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import * as styled from "./ProjectDetail.styles";
 import axiosInstance from "../../../../apis/projects.instance";
-import NewIssueForm from "./NewIssue";
-import Labels from "./Labels";
 import IssueTable from "../../Issues/IssueTable";
+import { COLUMNS } from "./columns";
+import Labels from "./Labels";
+import NewIssueForm from "./NewIssue";
+import * as styled from "./ProjectDetail.styles";
 
 const ProjectDetail = () => {
   const [loading, setLoading] = useState(true);

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTable } from "react-table";
-import * as s from "./../../../Styles/Table";
-import Modal from "../../../Styles/Modal";
+import Modal from "../../../Atomics/Modal";
+import * as s from "./../../../Atomics/Table";
 import IssueDetail from "./IssueDetail";
 
 export default function IssueTable({ columns, data }) {
@@ -32,13 +32,8 @@ export default function IssueTable({ columns, data }) {
     }
   }, [isEmpty, data.length]);
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = tableInstance;
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    tableInstance;
 
   return isEmpty === true ? (
     <s.TableContainer>
@@ -85,7 +80,15 @@ export default function IssueTable({ columns, data }) {
     </s.TableContainer>
   ) : (
     <>
-      <p>No issues available</p>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        Nothing to display
+      </div>
     </>
   );
 }

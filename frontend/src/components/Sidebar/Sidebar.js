@@ -60,7 +60,10 @@ const Sidebar = (props) => {
           selected={isItemSelected}
           onClick={() => handleMenuItemClick(item.name)}
         >
-          <styled.Icon isSidebarOpen={isSidebarOpen} src={item.icon} />
+          <styled.Icon
+            isSidebarOpen={isSidebarOpen}
+            src={isItemSelected ? item.iconSelected : item.icon}
+          />
           <styled.Text isSidebarOpen={isSidebarOpen}>{item.name}</styled.Text>
         </styled.MenuItem>
       </Link>

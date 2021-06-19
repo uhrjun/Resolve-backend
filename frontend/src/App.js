@@ -10,42 +10,59 @@ import Mainview from "./components/Mainview/Mainview";
 
 //Data
 const sidebarHeader = {
-	fullName: "RESOLVE",
-	shortName: "",
-	closeIcon: "icons/SidebarClose.svg",
-	openIcon: "icons/SidebarOpen.svg",
+  fullName: "RESOLVE",
+  shortName: "",
+  closeIcon: "icons/SidebarClose.svg",
+  openIcon: "icons/SidebarOpen.svg",
 };
 
 const menuItems = [
-	/* { id: 1, name: "Dashboard", to: "/dashboard", icon: "icons/dashboard.svg " }, */
-	{ id: 2, name: "My Projects", to: "/projects", icon: "icons/projects.svg" },
-	{ id: 3, name: "My Issues", to: "/issues", icon: "icons/issues.svg" },
-	{ id: 4, name: "Settings", to: "/settings", icon: "icons/settings.svg" },
+  {
+    id: 1,
+    name: "Dashboard",
+    to: "/dashboard",
+    icon: "icons/dashboard.svg ",
+    iconSelected: "icons/dashboard_selected.svg",
+  },
+  {
+    id: 2,
+    name: "My Projects",
+    to: "/projects",
+    icon: "icons/projects.svg",
+    iconSelected: "icons/projects_selected.svg",
+  },
+  {
+    id: 3,
+    name: "My Issues",
+    to: "/issues",
+    icon: "icons/issues.svg",
+    iconSelected: "icons/issues_selected.svg",
+  },
 ];
 
 const App = () => {
-	const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		setTimeout(() => setLoading(false), 250);
-	}, []);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 250);
+  }, []);
 
-	return (
-		<div>
-			{loading === false ? (
-				<Switch>
-					<ThemeProvider theme={myTheme}>
-						<styled.App>
-							<Sidebar sidebarHeader={sidebarHeader} menuItems={menuItems} />
-							<Mainview />
-						</styled.App>
-					</ThemeProvider>
-				</Switch>
-			) : (
-				<></>
-			)}
-		</div>
-	);
+  return (
+    <div>
+      {loading === false ? (
+        <Switch>
+          <ThemeProvider theme={myTheme}>
+            <styled.App>
+              <Sidebar sidebarHeader={sidebarHeader} menuItems={menuItems} />
+              <Mainview />
+            </styled.App>
+          </ThemeProvider>
+        </Switch>
+      ) : (
+        <></>
+      )}
+    </div>
+  );
 };
 
 export default App;

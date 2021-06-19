@@ -21,6 +21,7 @@ export const PrimaryButton = styled.button`
   border-radius: 3px;
   outline: none;
   border: none;
+  cursor: pointer;
   &:hover {
     background-color: rgba(52, 152, 219, 0.3);
     color: white;
