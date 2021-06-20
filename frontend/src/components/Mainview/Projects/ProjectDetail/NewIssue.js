@@ -18,7 +18,6 @@ export default function NewIssueForm() {
   const labelUrl = "projects/" + selectedProject + "/update/labels";
   const memberUrl = "projects/" + selectedProject;
   const toggleIsModalOpen = () => setIsModalOpen(!isModalOpen);
-  console.log("HERE YOU GO " + selectedProject);
 
   useEffect(() => {
     async function getMembers() {

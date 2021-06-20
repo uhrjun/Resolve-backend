@@ -1,0 +1,6 @@
+[submodule "Resolve-frontend-"]
+	path = Resolve-frontend-
+	url = https://github.com/uhrjun/Resolve-frontend-.git
+[submodule "Resolve-frontend"]
+	path = Resolve-frontend
+	url = https://github.com/uhrjun/Resolve-frontend
